@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JsonBenchmark.TestDTOs;
+using System;
 using System.IO;
 
 namespace JsonBenchmark
@@ -7,10 +8,13 @@ namespace JsonBenchmark
     {
         private const string TestFilesFolder = "TestFiles";
         protected string JsonSampleString;
+        protected Root SampleRootObject;
 
         protected JsonBenchmarkBase()
         {
             JsonSampleString = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, TestFilesFolder, "chucknorris.json"));
+
+            SampleRootObject = Newtonsoft.Json.JsonConvert.DeserializeObject<Root>(JsonSampleString);
         }
     }
 }
