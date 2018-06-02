@@ -21,7 +21,7 @@ namespace JsonBenchmark
             jw.WriteEndObject();
         }
 
-        private static void SerializeResultObject(JsonWriter jw, Result[] result)
+        private void SerializeResultObject(JsonWriter jw, Result[] result)
         {
             if (result == null)
             {
@@ -44,7 +44,7 @@ namespace JsonBenchmark
             }
         }
 
-        private static void SerializeCategory(JsonWriter jw, string[] category)
+        private void SerializeCategory(JsonWriter jw, string[] category)
         {
             if (category == null)
             {

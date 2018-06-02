@@ -41,6 +41,9 @@
     <Reference Include="BenchmarkDotNet.Toolchains.Roslyn, Version=0.10.14.0, Culture=neutral, PublicKeyToken=aa0ca2f9092cefc4, processorArchitecture=MSIL">
       <HintPath>..\packages\BenchmarkDotNet.Toolchains.Roslyn.0.10.14\lib\net46\BenchmarkDotNet.Toolchains.Roslyn.dll</HintPath>
     </Reference>
+    <Reference Include="LitJSON, Version=0.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LitJson.0.13.0\lib\net45\LitJSON.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeAnalysis, Version=2.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeAnalysis.Common.2.6.1\lib\netstandard1.3\Microsoft.CodeAnalysis.dll</HintPath>
     </Reference>
@@ -148,9 +151,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JsonBenchmarkBase.cs" />
-    <Compile Include="JsonDeserializersBenchmarks.cs" />
-    <Compile Include="JsonManualSerializer.cs" />
-    <Compile Include="JsonSerializersBenchmarks.cs" />
+    <Compile Include="LitJson\LitJsonSerializersBenchmarks.cs" />
+    <Compile Include="Newtonsoft\JsonDeserializersBenchmarks.cs" />
+    <Compile Include="Newtonsoft\JsonManualSerializer.cs" />
+    <Compile Include="Newtonsoft\JsonSerializersBenchmarks.cs" />
+    <Compile Include="LitJson\LitJsonDeserializersBenchmarks.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestDTOs\Result.cs" />
