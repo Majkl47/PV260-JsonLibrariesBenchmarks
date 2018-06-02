@@ -13,9 +13,15 @@ namespace JsonBenchmark
     public class JsonDeserializersBenchmarks : JsonBenchmarkBase
     {
         [Benchmark]
-        public Root NewtonsoftJson_Deserialize()
+        public Root NewtonsoftJson_Deserialize_ChuckNorris()
         {
             return JsonConvert.DeserializeObject<Root>(JsonSampleString);
+        }
+
+        [Benchmark]
+        public Root NewtonsoftJson_Deserialize_TestFile()
+        {
+            return JsonConvert.DeserializeObject<Root>(JsonSampleNotFunnyString);
         }
     }
 }
